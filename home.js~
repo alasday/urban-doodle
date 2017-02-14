@@ -11,10 +11,4 @@ ctx.fillStyle = "#ff0000";
 ctx.fillRect(x, y, x + 10, y - 10);
 }
 
-var clearCanvas = function(e){
-    ctx.clearRect(0,0,c.width,c.height);
-}
-
 c.addEventListener("click", draw);
-c.addEventListener("click", draw);
-
