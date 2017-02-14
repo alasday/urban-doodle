@@ -2,13 +2,24 @@ var c = document.getElementById("slate");
 var btn = document.getElementById("clear");
 var ctx = c.getContext("2d");
 
-ctx.fillStyle = "ff0000";
-ctx.fillRect(50,50,100,200);
+
+ctx.beginPath();
+ctx.moveTo(0, 0);
+
 
 var draw = function(e){
 var x = e.offsetX, y = e.offsetY;
+
+
 ctx.fillStyle = "#ff0000";
-ctx.fillRect(x + .1, y + .1, x, y);
+ctx.fillRect(x, y, 10, 10);
+ctx.lineTo(x, y);
+ctx.stroke();
+}
+
+var pt = function(e){
+    var x = e.offsetX, y = e.offsetY;
+    return [x, y];
 }
 
 var clearB = function(e){
@@ -17,4 +28,4 @@ var clearB = function(e){
 
 c.addEventListener("click", draw);
 btn.addEventListener("click", clearB);
-
+c.addEventListener("click", 
