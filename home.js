@@ -5,7 +5,8 @@ var ctx = c.getContext("2d");
 var j = true;
 ctx.beginPath();
 
-
+//requestID = window.requestAnimationFrame(drawDot);
+//window.cancelAnimationFrame(requestID);
 
 var draw = function(e){
     var x = e.offsetX, y = e.offsetY;
